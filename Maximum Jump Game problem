@@ -1,12 +1,11 @@
 #include <stdio.h>
-
-int canJump(int* nums, int numsSize) {
-    int maxReachableIndex = 0;
+int CJump(int* nums, int numsSize) {
+    int maxReachIndex = 0;
     for (int i = 0; i < numsSize; i++) {
-        if (i > maxReachableIndex) {
+        if (i > maxReachIndex) {
             return 0;
         }
-        maxReachableIndex = maxReachableIndex > i + nums[i] ? maxReachableIndex : i + nums[i];
+        maxReachIndex = maxReachableIndex > i + nums[i] ? maxReachIndex : i + nums[i];
     }
     return 1;
 }
@@ -20,7 +19,7 @@ int main() {
         printf("Enter element %d: ", i + 1);
         scanf("%d", &nums[i]);
     }
-    printf("%d\n", canJump(nums, numsSize));
+    printf("%d\n", CJump(nums, numsSize));
     free(nums);
     return 0;
 }
