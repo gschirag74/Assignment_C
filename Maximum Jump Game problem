@@ -5,7 +5,7 @@ int CJump(int* nums, int numsSize) {
         if (i > maxReachIndex) {
             return 0;
         }
-        maxReachIndex = maxReachableIndex > i + nums[i] ? maxReachIndex : i + nums[i];
+        maxReachIndex = maxReachIndex > i + nums[i] ? maxReachIndex : i + nums[i];
     }
     return 1;
 }
